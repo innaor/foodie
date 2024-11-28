@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Halaman Konten</title>
+
+  <style>
+    /* Main content */
+    .main-content { 
+      background-color: #f8f9fa;
+      height: 97vh;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-left: 80px;
+      border-radius: 10px;
+      overflow-y: auto;
+    }
+
+    /* Header container */
+    .header-container { 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 1px solid #ddd;
+      padding: 10px 0;
+      max-width: 100%;
+      overflow: hidden;
+    }
+
+    /* Gaya item dalam header */
+    .header-item { 
+      position: relative;
+      cursor: pointer;
+      text-align: center;
+      padding: 10px 15px;
+      flex: 1;
+    }
+
+    .header-text { 
+      font-size: 16px;
+      font-weight: normal;
+      color: #333;
+      display: inline-block;
+    }
+
+    .header-item::before { 
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      width: 0;
+      height: 3px;
+      background-color: #f09133;
+      transition: width 0.3s ease-in-out;
+      margin-left: -50%;
+    }
+
+    .header-item:hover::before { 
+      width: 50vw;
+    }
+
+    .header-item.hover .header-text { 
+      font-weight: bold;
+      color: #f09133;
+    }
+
+    .header-text:hover { 
+      font-weight: bold;
+      color: #f09133;
+    }
+
+    /* Gaya grid item */
+    .grid-item:hover { 
+      background-color: #85cddb;
+    }
+
+    .grid-item { 
+      background-color: #aaebf7;
+      border-radius: 10px;
+      overflow: hidden;
+      padding: 10px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      position: relative;
+      height: 300px;
+    }
+
+    .grid-item img { 
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 8px;
+    }
+
+    .grid-item .duration { 
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 2px 8px;
+      font-size: 12px;
+      border-radius: 4px;
+    }
+
+    .grid-item .info { 
+      margin-top: 10px;
+    }
+
+    .grid-item .info h5 { 
+      font-size: 16px;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .grid-item .info p { 
+      font-size: 14px;
+      color: #666;
+      margin: 0;
+    }
+
+    /* Menambahkan jarak antar kolom dan baris */
+    .row {
+      gap: 30px; /* Jarak antar kolom dan baris */
+    }
+
+    /* Jika menggunakan margin di dalam kolom */
+    .row .col {
+      margin-bottom: 20px; /* Jarak antar baris */
+      margin-right: 15px; /* Jarak antar kolom */
+    }
+
+    /* Mengatur margin untuk kolom terakhir agar tidak ada jarak ekstra */
+    .row .col:last-child {
+      margin-right: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="col main-content">
+    <header>
+      <div class="container">
+        <!-- Kolom dengan lebar 10 dari grid -->
+        <div class="row">
+          <!-- Membagi kolom menjadi 6 kolom untuk masing-masing header -->
+          <div class="col-6">
+            <div class="header-container">
+              <div class="header-item" onclick="activateHeader(this)">
+                <span class="header-text"><i class="bi bi-bookmark"></i>Postingan</span>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-6">
+            <div class="header-container">
+              <div class="header-item" onclick="activateHeader(this)">
+                <span class="header-text"><i class="bi bi-play"></i>Video</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Grid Container -->
+    <div class="container my-4">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+        <!-- Grid Item 1 -->
+        <div class="col">
+          <div class="grid-item">
+            <img src="images/SH_frappuccino.jpg" alt="Example 1">
+            <div class="duration">0:15</div>
+            <div class="info">
+              <h5>Frappucino</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur </p>
+            </div>
+          </div>
+        </div>
+        <!-- Grid Item 2 -->
+        <div class="col">
+          <div class="grid-item">
+            <img src="images/Mango-Sticky.jpg" alt="Example 2">
+            <div class="duration">0:15</div>
+            <div class="info">
+              <h5>Thailand Mango Sticky Rice</h5>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quae in </p>
+            </div>
+          </div>
+        </div>
+        <!-- Grid Item 3 -->
+        <div class="col"> 
+          <div class="grid-item">
+            <img src="images/smoothie-bowl.jpg" alt="Example 3">
+            <div class="duration">0:15</div>
+            <div class="info">
+              <h5>Smoothies Bowl</h5>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero natus</p>
+            </div>
+          </div>
+        </div>
+        <div class="col"> 
+          <div class="grid-item">
+            <img src="images/rendang.jpg" alt="Example 3">
+            <div class="duration">0:15</div>
+            <div class="info">
+              <h5>Rendang</h5>
+              <p>Lorem ipsum dolor sit amet consectet</p>
+            </div>
+          </div>
+        </div>
+        <div class="col"> 
+          <div class="grid-item">
+            <img src="images/strawberry-roll.jpg" alt="Example 3">
+            <div class="duration">0:15</div>
+            <div class="info">
+              <h5>Strawberry Swiss Roll</h5>
+              <p>Vindes</p>
+            </div>
+          </div>
+        </div>
+        <div class="col"> 
+          <div class="grid-item">
+            <img src="images/hainan.jpg" alt="Example 3">
+            <div class="duration">0:15</div>
+            <div class="info">
+              <h5>Nasi Hainan</h5>
+              <p>Lorem ipsum, dolor sit amet consectetur ad</p>
+            </div>
+          </div>
+        </div>
+        <div class="col"> 
+          <div class="grid-item">
+            <img src="images/samosa.jpg" alt="Example 3">
+            <div class="duration">0:15</div>
+            <div class="info">
+              <h5>Samosa</h5>
+              <p>Lorem ipsum dolor sit, amet consectetur</p>
+            </div>
+          </div>
+        </div>
+        <div class="col"> 
+          <div class="grid-item">
+            <img src="/images/dawet.jpg" alt="Example 3">
+            <div class="duration">0:15</div>
+            <div class="info">
+              <h5>Es Dawet</h5>
+              <p>Lorem ipsum dolor sit amet consectetur adip</p>
+            </div>
+          </div>
+        </div>
+        <div class="col"> 
+          <div class="grid-item">
+            <img src="images/rawon.jpg" alt="Example 3">
+            <div class="duration">0:15</div>
+            <div class="info">
+              <h5>Rawon</h5>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

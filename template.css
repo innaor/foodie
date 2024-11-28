@@ -1,0 +1,54 @@
+ul {
+    list-style-type: none; /* Menghapus bullet atau tanda list bawaan */
+    margin: 0; /* Menghapus margin bawaan dari elemen <ul> */
+    padding: 0; /* Menghapus padding bawaan dari elemen <ul> */
+    width: 12%; /* mengatur lebar container*/
+    background-color: white;
+    position: fixed; /* Sidebar tetap di posisi kiri layar saat menggulir halaman */
+    height: 97%; /* Membuat sidebar memenuhi tinggi layar penuh */
+    overflow: auto; /* Menambahkan scroll otomatis jika konten lebih panjang dari layar */
+    margin-left: 10px; /*jarak kontainer dari kiri*/
+    margin-top: 10px; /*jarak kontainer dari atas*/
+    margin-bottom: 10px; /*jarak kontainer dari bawah*/
+    border-radius: 10px 10px 10px 10px; /*efek cengkung*/
+  }
+  
+  ul li img {
+    width: 42px;
+    height: 32px;
+    padding-right: 10px;
+  }
+  
+  /* Mengatur warna latar belakang pada seluruh halaman (body dan html) */
+  body,
+  html {
+    background-color: #d9d9d9; /* Warna abu-abu terang untuk latar belakang */
+    font-family: "league spartan", sans-serif;
+  }
+  
+  /* Menghapus margin bawaan pada elemen body */
+  body {
+    margin: 0;
+  }
+  
+  /* Mengatur ikon agar sejajar secara horizontal dengan teks pada elemen navigasi */
+  ul li {
+    display: flex; /* Menggunakan Flexbox untuk menyusun konten secara horizontal */
+    align-items: center; /* Menyelaraskan ikon dan teks di tengah secara vertikal */
+    padding: 5px; /* Memberikan ruang di dalam elemen navigasi */
+  }
+  
+  ul li a {
+    text-decoration: none; /* Menghilangkan garis bawah tautan */
+    color: black;
+    flex-grow: 1; /* Membuat teks mengisi sisa ruang jika perlu */
+  }
+  
+  li a i {
+    margin-right: 10px; /* memberikan jarak antara teks dan ikon */
+  }
+  
+  ul li i {
+    font-size: 20px; /* Ukuran ikon */
+    color: #555; /* Warna ikon */
+  }

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pesan</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="pesan.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- sidebar start -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-1 p-0 sidebar">
+          <ul>
+            <li><img src="images/LOGO.png" alt="logo" /></li>
+            <li>
+              <a href="#profile"><i class="bi bi-person-fill"></i></a>
+            </li>
+            <li>
+              <a href="#home"><i class="bi bi-house-door-fill"></i></a>
+            </li>
+            <li>
+              <a href="#communities"><i class="bi bi-people-fill"></i></a>
+            </li>
+            <li>
+              <a href="#messages"
+                ><i class="bi bi-chat-square-text-fill"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#notification"><i class="bi bi-bell-fill"></i></a>
+            </li>
+            <li>
+              <a href="#favorite"><i class="bi bi-bookmark-heart-fill"></i></a>
+            </li>
+            <li>
+              <a href="#download"><i class="bi bi-download"></i></a>
+            </li>
+          </ul>
+        </div>
+        <!-- sidebar end -->
+
+        <!-- Main content -->
+        <div class="col main-content">
+          <div class="row">
+            <div class="col-md-4 p-0">
+              <!-- header daftar chat start-->
+              <div class="chat-header">
+                <h5>User</h5>
+              </div>
+              <!-- header daftar chat end -->
+              <!-- Daftar Chat -->
+            </div>
+              <!-- Kolom Konten Utama (col-8) -->
+            <div class="col-8">
+                <!-- header room caht start -->
+                <div class="d-flex align-items-center pt-2">
+                    <img
+                      src="images/LOGO.png"
+                      alt="Profil Pengguna"
+                      class="rounded-circle me-2"
+                      width="40"
+                      height="40"
+                    />
+                    <div>
+                      <div class="fw-bold">Kelvin Agustinus</div>
+                      <div class="text-muted small">Online</div>
+                    </div>
+                    <div class="ms-auto">
+                        <button class="btn btn-light btn-sm me-2">
+                          <i class="bi bi-telephone"></i>
+                        </button>
+                        <button class="btn btn-light btn-sm me-2">
+                          <i class="bi bi-camera-video"></i>
+                        </button>
+                        <button class="btn btn-light btn-sm">
+                            <i class="bi bi-info-square"></i>
+                        </button>
+                    </div>
+                </div>
+                  
+                 <!-- header roomchat end -->
+                <div class="content-container p-3">
+                  <div class="chat-room">
+                    <!-- Bubble chat dari pengguna -->
+                    <div class="chat-bubble sent">
+                      Ini adalah pesan teks pendek.
+                    </div>
+                    <div class="chat-bubble sent">
+                      Ini adalah pesan teks yang sangat panjang yang akan
+                      otomatis membungkus teks ke baris berikutnya jika terlalu
+                      lebar untuk kontainer.
+                    </div>
+                    <!-- Bubble chat dari lawan bicara -->
+                    <div class="chat-bubble received">
+                      Pesan singkat dari penerima.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

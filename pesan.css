@@ -1,0 +1,124 @@
+/* Body dan Konten Utama */
+body,
+html {
+  background-color: #d9d9d9;
+  font-family: "League Spartan", sans-serif;
+  margin: 0;
+}
+
+/* Sidebar */
+.sidebar {
+  display: flex; /* Mengaktifkan Flexbox */
+  flex-direction: column; /* Susun elemen secara vertikal */
+  justify-content: space-between; /* Distribusi konten dengan jarak merata */
+  align-items: center; /* Pusatkan konten secara horizontal */
+  width: 60px; /* Lebar sidebar */
+  background-color: white; /* Warna latar belakang sidebar */
+  position: fixed; /* Sidebar tetap di tempat */
+  height: 97%; /* Sidebar memenuhi hampir seluruh tinggi layar */
+  margin: 10px; /* Jarak dari tepi layar */
+  border-radius: 10px; /* Efek lengkung pada sudut */
+}
+
+/* Gaya untuk ul di dalam sidebar */
+.sidebar ul {
+  list-style-type: none; /* Hapus bullet list */
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Urutan elemen dari atas ke bawah */
+  justify-content: flex-start; /* Semua elemen dimulai dari atas */
+  align-items: center;
+  gap: 20px; /* Jarak antar elemen */
+}
+
+/* Gambar logo */
+.sidebar ul li img {
+  width: 40px; /* Ukuran logo */
+  height: auto;
+  margin-top: 5px;
+}
+
+/* Elemen list */
+.sidebar ul li {
+  display: flex;
+  justify-content: center; /* Pusatkan konten secara horizontal */
+  align-items: center;
+}
+
+/* Tautan dalam list */
+.sidebar ul li a {
+  text-decoration: none; /* Hapus garis bawah tautan */
+  color: black;
+}
+
+.sidebar ul li i {
+  font-size: 30px; /* Ukuran ikon */
+  color: #555; /* Warna ikon */
+}
+
+/* Efek hover */
+.sidebar ul li a:hover {
+  color: #85cddb;
+}
+
+.sidebar ul li a:hover i {
+  color: #85cddb;
+}
+
+/* main content */
+.main-content {
+  background-color: #f8f9fa;
+  height: 97vh;
+  margin-top: 10px; /*jarak kontainer dari atas*/
+  margin-bottom: 10px; /*jarak kontainer dari bawah*/
+  margin-left: 80px; /*jarak kontainer dari sidebar*/
+  border-radius: 10px 10px 10px 10px; /*efek cengkung*/
+  overflow-y: auto;
+}
+
+/* Styling untuk header chat */
+.chat-header h5 {
+  font-weight: bold;
+  color: #333;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
+  position: sticky;
+}
+
+/* Tata letak chat room */
+.chat-room {
+  padding: 10px;
+  height: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Bubble chat dasar */
+.chat-bubble {
+  padding: 10px 15px;
+  border-radius: 15px;
+  font-size: 14px;
+  max-width: 60%; /* Maksimal 75% dari lebar kontainer */
+  word-wrap: break-word; /* Bungkus teks panjang */
+  word-break: break-word; /* Pecah kata jika terlalu panjang */
+  line-height: 1.5;
+}
+
+/* Bubble chat dikirim */
+.chat-bubble.sent {
+  background-color: #007bff;
+  color: #fff;
+  align-self: flex-end; /* Rata ke kanan */
+}
+
+/* Bubble chat diterima */
+.chat-bubble.received {
+  background-color: #e9ecef;
+  color: #333;
+  align-self: flex-start; /* Rata ke kiri */
+}

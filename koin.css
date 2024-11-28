@@ -1,0 +1,223 @@
+/* Body dan Konten Utama */
+body,
+html {
+  background-color: #d9d9d9;
+  font-family: "League Spartan", sans-serif;
+  margin: 0;
+}
+
+/* Sidebar */
+.sidebar {
+  display: flex; /* Mengaktifkan Flexbox */
+  flex-direction: column; /* Susun elemen secara vertikal */
+  justify-content: space-between; /* Distribusi konten dengan jarak merata */
+  align-items: center; /* Pusatkan konten secara horizontal */
+  width: 60px; /* Lebar sidebar */
+  background-color: white; /* Warna latar belakang sidebar */
+  position: fixed; /* Sidebar tetap di tempat */
+  height: 97%; /* Sidebar memenuhi hampir seluruh tinggi layar */
+  margin: 10px; /* Jarak dari tepi layar */
+  border-radius: 10px; /* Efek lengkung pada sudut */
+}
+
+/* Gaya untuk ul di dalam sidebar */
+.sidebar ul {
+  list-style-type: none; /* Hapus bullet list */
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Urutan elemen dari atas ke bawah */
+  justify-content: flex-start; /* Semua elemen dimulai dari atas */
+  align-items: center;
+  gap: 20px; /* Jarak antar elemen */
+}
+
+/* Gambar logo */
+.sidebar ul li img {
+  width: 40px; /* Ukuran logo */
+  height: auto;
+  margin-top: 5px;
+}
+
+/* Elemen list */
+.sidebar ul li {
+  display: flex;
+  justify-content: center; /* Pusatkan konten secara horizontal */
+  align-items: center;
+}
+
+/* Tautan dalam list */
+.sidebar ul li a {
+  text-decoration: none; /* Hapus garis bawah tautan */
+  color: black;
+}
+
+.sidebar ul li i {
+  font-size: 30px; /* Ukuran ikon */
+  color: #555; /* Warna ikon */
+}
+
+/* Efek hover */
+.sidebar ul li a:hover {
+  color: #85cddb;
+}
+
+.sidebar ul li a:hover i {
+  color: #85cddb;
+}
+
+/* main content */
+.main-content {
+  background-color: #f8f9fa;
+  height: 97vh;
+  margin-top: 10px; /*jarak kontainer dari atas*/
+  margin-bottom: 10px; /*jarak kontainer dari bawah*/
+  margin-left: 80px; /*jarak kontainer dari sidebar*/
+  border-radius: 10px 10px 10px 10px; /*efek cengkung*/
+  overflow-y: auto;
+}
+
+/* header */
+.header {
+  padding-top: 20px;
+  padding-right: 5px;
+  display: flex;
+  justify-content: space-between; /* Membuat gambar berada di sebelah kanan */
+}
+
+.header i {
+  font-size: 20px;
+  color: #f09133;
+}
+
+.header img {
+  max-width: 100%;
+  /*Agargambarresponsifdantidakmelebihilebarkontainer*/
+  height: 50px;
+  border-radius: 50%;
+}
+
+.header .back-icon {
+  font-size: 24px;
+}
+.balance {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+.balance img {
+  width: 50px;
+  height: 50px;
+}
+.balance .amount {
+  font-size: 36px;
+  color: #ffa500;
+  margin-left: 10px;
+}
+
+span i {
+  margin-right: 10px;
+  color: #f09133;
+}
+
+.header-text {
+  color: #f09133;
+}
+
+/* Garis Bawah untuk Baris col-4 */
+.row::after {
+  content: "";
+  position: absolute;
+  top: 100%; /* Tepat di bawah baris */
+  left: 0;
+  width: 100%; /* Memenuhi seluruh baris */
+  height: 1px; /* Tinggi garis */
+  background: #ddd; /* Warna garis */
+  z-index: 0; /* Garis berada di bawah konten */
+}
+
+/* Pastikan posisi relatif pada .row untuk referensi posisi */
+.row {
+  position: relative; /* Dibutuhkan agar ::after menggunakan posisi .row */
+  z-index: 1; /* Konten tetap di atas garis */
+}
+
+/* Efek Hover pada Item Header */
+.header-item {
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  padding: 10px 15px;
+  flex: 1; /* Membuat tiap item header membagi ruang secara merata */
+  transition: color 0.3s ease, background-color 0.3s ease; /* Animasi halus */
+}
+
+.header-item:hover {
+  background-color: #f9f9f9; /* Warna latar belakang saat hover */
+  color: #f09133; /* Warna teks saat hover */
+}
+
+.header-item:hover::before {
+  width: 100%; /* Garis memanjang sepanjang elemen .header-item */
+}
+
+.header-item::before {
+  content: "";
+  position: absolute;
+  top: 100%; /* Garis muncul di bawah teks */
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background-color: #f09133; /* Warna garis */
+  transition: width 0.3s ease-in-out; /* Animasi halus */
+  transform: translateX(-50%); /* Memusatkan garis */
+}
+
+/* Teks Header Saat Hover */
+.header-item:hover .header-text {
+  font-weight: bold; /* Teks menjadi tebal */
+  color: #f09133; /* Warna teks oranye */
+}
+
+.header-text {
+  font-size: 16px;
+  font-weight: normal;
+  color: #333; /* Warna default teks */
+  display: inline-block; /* Menyelaraskan teks secara inline */
+}
+
+/* transaksi */
+.list-transaksi {
+  margin-top: 20px;
+  border-radius: 8px;
+}
+.item-transaksi {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+.item-transaksi:last-child {
+  border-bottom: none;
+}
+.item-transaksi img {
+  width: 80px;
+  height: auto;
+  margin-right: 20px;
+}
+.item-transaksi .details {
+  flex-grow: 1;
+}
+.item-transaksi .details .title {
+  font-size: 16px;
+  font-weight: bold;
+}
+.item-transaksi .details .subtitle {
+  font-size: 14px;
+  color: #6c757d;
+}
+.item-transaksi .amount {
+  font-size: 18px;
+  color: #ff9800;
+}
